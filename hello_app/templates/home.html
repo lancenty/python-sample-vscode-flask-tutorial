@@ -3,5 +3,11 @@
 Home
 {% endblock %}
 {% block content %}
-<p>Home page for the Visual Studio Code Flask tutorial.</p>
+{%if version %}
+    <strong>Python Version:</strong> <p>{{ version }}</p>
+{% endif %}
+{%if requirements %}
+    <strong>requirements.txt:</strong>
+    <p>{{requirements|safe }}</p>
+{% endif %}
 {% endblock %}

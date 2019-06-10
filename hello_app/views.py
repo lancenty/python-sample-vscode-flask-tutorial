@@ -1,10 +1,14 @@
 from datetime import datetime
 from flask import Flask, render_template
+import platform
 from . import app
 
 @app.route("/")
 def home():
-    return render_template("home.html")
+    f = open("requirements.txt", "r")
+    r = f.read().replace('\n','<br>')
+    f.close()
+    return render_template("home.html", requirements=r, version=platform.python_version())
 
 @app.route("/about/")
 def about():
