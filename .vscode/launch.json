@@ -64,7 +64,7 @@
             "request": "launch",
             "module": "flask",
             "env": {
-                "FLASK_APP": "hello_app.webapp"                
+                "FLASK_APP": "show_requirements.webapp"
             },
             "args": [
                 "run",
