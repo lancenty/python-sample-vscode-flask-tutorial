@@ -6,3 +6,6 @@ MarkupSafe==1.0
 Werkzeug==0.14.1
 scikit-learn
 numpy
+pandas
+keras
+tensorflow
