@@ -3,7 +3,7 @@ FROM tiangolo/uwsgi-nginx-flask:python3.6-alpine3.7
 
 # Set the port on which the app runs; make both values the same.
 #
-# IMPORTANT: When deploying to Azure App Service, go to the App Service on the Azure 
+# IMPORTANT: When deploying to Azure App Service, go to the App Service on the Azure
 # portal, navigate to the Applications Settings blade, and create a setting named
 # WEBSITES_PORT with a value that matches the port here (the Azure default is 80).
 # You can also create a setting through the App Service Extension in VS Code.
@@ -18,13 +18,13 @@ ENV UWSGI_INI uwsgi.ini
 # app's folder. Note that when multiple apps share a folder, you should create subfolders
 # with the same name as the app underneath "static" so there aren't any collisions
 # when all those static files are collected together.
-ENV STATIC_URL /hello_app/static
+ENV STATIC_URL /show_req/static
 
 # Set the folder where uwsgi looks for the app
-WORKDIR /hello_app
+WORKDIR /show_req
 
 # Copy the app contents to the image
-COPY . /hello_app
+COPY . /show_req
 
 # If you have additional requirements beyond Flask (which is included in the
 # base image), generate a requirements.txt file with pip freeze and uncomment
