@@ -8,7 +8,10 @@ def home():
     f = open("requirements.txt", "r")
     r = f.read().replace('\n','<br>')
     f.close()
-    return render_template("home.html", requirements=r, version=platform.python_version())
+    return render_template("home.html",
+           requirements=r,
+           version=platform.python_version()
+    )
 
 @app.route("/about/")
 def about():
